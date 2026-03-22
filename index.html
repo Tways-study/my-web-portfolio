@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description" content="High fidelity dynamic web portfolio">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="logo">Tways<span>.dev</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="section hero">
+            <div class="hero-content hidden">
+                <p class="greeting">Hello, world.</p>
+                <h1 class="name">I'm a <span class="typed-text"></span><span class="cursor-blink">|</span></h1>
+                <p class="hero-subtitle">Crafting digital experiences with focus on design and performance.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="section-container">
+                <h2 class="section-title hidden">About Me</h2>
+                <div class="about-content hidden">
+                    <div class="about-text">
+                        <p>I am a passionate web developer and designer based in Iloilo City. I specialize in building highly interactive, scalable, and visually compelling web applications and pages.</p>
+                        <p>My approach blends technical expertise with a keen eye for aesthetics, ensuring that every project not only functions flawlessly but also delivers an unforgettable user experience.</p>
+                        
+                        <!-- Core technologies moved to dedicated Skills section -->
+                    </div>
+                    <div class="about-visual hidden" style="transition-delay: 200ms;">
+                        <div class="profile-card">
+                            <div class="profile-image-wrapper">
+                                <img src="profile-pic.jpg" alt="Tways.dev" class="profile-img">
+                            </div>
+                            <div class="profile-card-bg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="section-container">
+                <h2 class="section-title hidden">My Toolset</h2>
+                <div class="glowing-cards hidden" id="skills-cards">
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-html5 skill-icon'></i>
+                            <h3>HTML</h3>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-css3 skill-icon'></i>
+                            <h3>CSS</h3>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-javascript skill-icon'></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-react skill-icon'></i>
+                            <h3>React</h3>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-java skill-icon'></i>
+                            <h3>Java</h3>
+                        </div>
+                    </div>
+                    <div class="glow-card">
+                        <div class="glow-card-content">
+                            <i class='bx bxl-python skill-icon'></i>
+                            <h3>Python</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="section-container">
+                <h2 class="section-title hidden">Selected Work</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card hidden">
+                        <div class="project-image">
+                            <!-- Placeholder image representing a project -->
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard UI">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Analytics Dashboard</h3>
+                            <p>A comprehensive data visualization tool utilizing real-time metrics.</p>
+                            <div class="project-tags">
+                                <span>Data</span>
+                                <span>UI Design</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card hidden" style="transition-delay: 150ms;">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Platform</h3>
+                            <p>Modern shopping experience with seamless checkout and inventory management.</p>
+                            <div class="project-tags">
+                                <span>Fullstack</span>
+                                <span>Platform</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card hidden" style="transition-delay: 300ms;">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Application">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Banking App Concept</h3>
+                            <p>An intuitive mobile banking interface focused on user accessibility.</p>
+                            <div class="project-tags">
+                                <span>Mobile</span>
+                                <span>Fintech</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-container">
+                <div class="contact-wrapper hidden">
+                    <div class="contact-info">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <p>Have a project in mind or want to discuss opportunities? I'm currently open for new roles and exciting projects.</p>
+                        <ul class="social-links">
+                            <li><a href="#"><i class='bx bxl-linkedin-square'></i> LinkedIn</a></li>
+                            <li><a href="#"><i class='bx bxl-github'></i> GitHub</a></li>
+                            <li><a href="#"><i class='bx bxl-facebook'></i> Facebook</a></li>
+                            <li><a href="#"><i class='bx bx-envelope'></i> twicenavarro23@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" required placeholder=" " rows="4"></textarea>
+                            <label for="message">Message</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Message <i class='bx bx-send' ></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tways.dev. Built with passion and chill vibes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
