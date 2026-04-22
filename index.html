@@ -1,220 +1,368 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tways | Creative Developer</title>
-    <meta name="description" content="High fidelity dynamic web portfolio">
+    <title>Tways.dev — Creative Developer</title>
+    <meta name="description" content="Portfolio of Tways Navarro — developer and designer building precise, purposeful digital products from Iloilo City, PH.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+
     <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="cursor-outline" id="cursor-outline"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
 
     <nav class="navbar" id="navbar">
-        <div class="nav-content">
-            <div class="logo">Tways<span>.dev</span></div>
+        <div class="nav-inner">
+            <a href="#home" class="logo">TWAYS<span class="logo-accent">.dev</span></a>
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Work</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills"   class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Work</a></li>
+                <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
             </ul>
+            <a href="mailto:twicenavarro23@gmail.com" class="nav-cta">Hire Me <span class="cta-arrow">↗</span></a>
         </div>
     </nav>
 
     <main>
-        <section id="home" class="section hero">
-            <div class="hero-content hidden">
-                <p class="greeting">Hello, world.</p>
-                <h1 class="name">I'm a <span class="typed-text"></span><span class="cursor-blink">|</span></h1>
-                <p class="hero-subtitle">Crafting digital experiences with focus on design and performance.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary-btn">View Projects</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+
+        <section id="home" class="hero-section">
+            <div class="hero-grid-bg" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="hero-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Available for work</span>
+                    <span class="label-dot"></span>
+                </div>
+                <h1 class="hero-heading">
+                    <span class="hero-line">Creative</span>
+                    <span class="hero-line accent-line">Developer</span>
+                    <span class="hero-line">& Designer</span>
+                </h1>
+                <div class="hero-bottom">
+                    <p class="hero-desc">
+                        Building precise, purposeful digital experiences.<br>
+                        Based in <strong>Iloilo City, PH</strong>.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num" data-target="5">0</span>
+                            <span class="stat-label">Projects<br>Shipped</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="3">0</span>
+                            <span class="stat-label">Years<br>Building</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num" data-target="7">0</span>
+                            <span class="stat-label">Tech<br>Mastered</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-cta-row">
+                    <a href="#projects" class="btn-primary">View Work <span class="btn-icon">↓</span></a>
+                    <a href="#contact"  class="btn-ghost">Get in Touch</a>
                 </div>
             </div>
-            <div class="hero-background">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
+            <div class="hero-scroll-track" aria-hidden="true">
+                <div class="scroll-progress"></div>
             </div>
         </section>
 
-        <section id="about" class="section about">
-            <div class="section-container">
-                <h2 class="section-title hidden">About Me</h2>
-                <div class="about-content hidden">
-                    <div class="about-text">
-                        <p>I am a passionate web developer and designer based in Iloilo City. I specialize in building highly interactive, scalable, and visually compelling web applications and pages.</p>
-                        <p>My approach blends technical expertise with a keen eye for aesthetics, ensuring that every project not only functions flawlessly but also delivers an unforgettable user experience.</p>
-                        
-                        <!-- Core technologies moved to dedicated Skills section -->
-                    </div>
-                    <div class="about-visual hidden" style="transition-delay: 200ms;">
-                        <div class="profile-card">
-                            <div class="profile-image-wrapper">
-                                <img src="profile-pic.jpg" alt="Tways.dev" class="profile-img">
-                            </div>
-                            <div class="profile-card-bg"></div>
-                        </div>
-                    </div>
+        <section id="about" class="section about-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-num">01</span>
+                    <span class="section-rule"></span>
+                    <span class="section-name">About</span>
                 </div>
-            </div>
-        </section>
-
-        <section id="skills" class="section skills">
-            <div class="section-container">
-                <h2 class="section-title hidden">My Toolset</h2>
-                <div class="glowing-cards hidden" id="skills-cards">
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-html5 skill-icon'></i>
-                            <h3>HTML</h3>
+                <div class="about-grid">
+                    <div class="about-text-col reveal">
+                        <h2 class="about-heading">Tways<br>Navarro</h2>
+                        <p class="about-bio">I'm a web developer and designer from Iloilo City who obsesses over the intersection of engineering and aesthetics. I build interfaces that don't just work — they feel inevitable.</p>
+                        <p class="about-bio">My work spans mobile apps, full-stack platforms, and interactive UIs. I approach every project with design intent and technical rigor, because craft matters.</p>
+                        <div class="about-tags reveal-stagger">
+                            <span class="tag">React</span>
+                            <span class="tag">Capacitor</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">UI/UX</span>
                         </div>
                     </div>
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-css3 skill-icon'></i>
-                            <h3>CSS</h3>
-                        </div>
-                    </div>
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-javascript skill-icon'></i>
-                            <h3>JavaScript</h3>
-                        </div>
-                    </div>
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-react skill-icon'></i>
-                            <h3>React</h3>
-                        </div>
-                    </div>
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-java skill-icon'></i>
-                            <h3>Java</h3>
-                        </div>
-                    </div>
-                    <div class="glow-card">
-                        <div class="glow-card-content">
-                            <i class='bx bxl-python skill-icon'></i>
-                            <h3>Python</h3>
+                    <div class="about-visual-col reveal" style="--reveal-delay: 200ms;">
+                        <div class="profile-frame">
+                            <img src="profile-pic.jpg" alt="Tways Navarro" class="profile-img" loading="lazy">
+                            <div class="profile-frame-border" aria-hidden="true"></div>
+                            <div class="profile-accent-block" aria-hidden="true"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section projects">
-            <div class="section-container">
-                <h2 class="section-title hidden">Selected Work</h2>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <article class="project-card hidden">
-                        <div class="project-image">
-                            <!-- Placeholder image representing a project -->
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard UI">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+        <section id="skills" class="section skills-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-num">02</span>
+                    <span class="section-rule"></span>
+                    <span class="section-name">Toolset</span>
+                </div>
+            </div>
+            <div class="marquee-wrapper" aria-hidden="true">
+                <div class="marquee-track" id="marquee-track">
+                    <div class="marquee-inner">
+                        <span class="marquee-item"><i class="bx bxl-html5"></i> HTML5</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-css3"></i> CSS3</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-javascript"></i> JavaScript</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-react"></i> React</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-java"></i> Java</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-python"></i> Python</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Supabase</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Capacitor</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Figma</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Vite</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-html5"></i> HTML5</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-css3"></i> CSS3</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-javascript"></i> JavaScript</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-react"></i> React</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-java"></i> Java</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item"><i class="bx bxl-python"></i> Python</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Supabase</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Capacitor</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Figma</span>
+                        <span class="marquee-sep">—</span>
+                        <span class="marquee-item">Vite</span>
+                        <span class="marquee-sep">—</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-detail section-inner reveal-stagger">
+                <div class="skill-group">
+                    <span class="skill-group-label">Frontend</span>
+                    <div class="skill-pills">
+                        <span class="pill active">HTML / CSS</span>
+                        <span class="pill active">JavaScript</span>
+                        <span class="pill active">React</span>
+                        <span class="pill">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-group-label">Backend & Data</span>
+                    <div class="skill-pills">
+                        <span class="pill active">Supabase</span>
+                        <span class="pill active">REST APIs</span>
+                        <span class="pill active">SQL</span>
+                        <span class="pill">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-group-label">Mobile & Tools</span>
+                    <div class="skill-pills">
+                        <span class="pill active">Capacitor</span>
+                        <span class="pill active">Android</span>
+                        <span class="pill active">Vite</span>
+                        <span class="pill active">Git</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-group-label">Languages</span>
+                    <div class="skill-pills">
+                        <span class="pill active">JavaScript</span>
+                        <span class="pill active">Python</span>
+                        <span class="pill active">Java</span>
+                        <span class="pill">C++</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-num">03</span>
+                    <span class="section-rule"></span>
+                    <span class="section-name">Selected Work</span>
+                </div>
+                <div class="projects-list">
+
+                    <article class="project-row">
+                        <div class="project-row-inner">
+                            <div class="project-meta">
+                                <span class="project-num">01</span>
+                                <div class="project-tags-col">
+                                    <span class="p-tag">React</span>
+                                    <span class="p-tag">Capacitor</span>
+                                    <span class="p-tag">Gemini AI</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Handog-Aral</h3>
+                                <p class="project-desc">A mobile learning app for Filipino children — combining OCR scanning, Gemini AI word analysis, and gamified vocabulary building. Shipped to Android via Capacitor.</p>
+                            </div>
+                            <div class="project-action">
+                                <a href="#" class="project-link-btn">View <span class="link-arrow">↗</span></a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Analytics Dashboard</h3>
-                            <p>A comprehensive data visualization tool utilizing real-time metrics.</p>
-                            <div class="project-tags">
-                                <span>Data</span>
-                                <span>UI Design</span>
-                            </div>
-                        </div>
+                        <div class="project-divider"></div>
                     </article>
 
-                    <!-- Project 2 -->
-                    <article class="project-card hidden" style="transition-delay: 150ms;">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Platform">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                    <article class="project-row">
+                        <div class="project-row-inner">
+                            <div class="project-meta">
+                                <span class="project-num">02</span>
+                                <div class="project-tags-col">
+                                    <span class="p-tag">HTML/CSS/JS</span>
+                                    <span class="p-tag">Supabase</span>
+                                    <span class="p-tag">Auth</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">UniLend</h3>
+                                <p class="project-desc">A university library lending platform with admin and student portals, real-time inventory tracking, and Supabase-powered authentication and database.</p>
+                            </div>
+                            <div class="project-action">
+                                <a href="#" class="project-link-btn">View <span class="link-arrow">↗</span></a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>E-commerce Platform</h3>
-                            <p>Modern shopping experience with seamless checkout and inventory management.</p>
-                            <div class="project-tags">
-                                <span>Fullstack</span>
-                                <span>Platform</span>
-                            </div>
-                        </div>
+                        <div class="project-divider"></div>
                     </article>
 
-                    <!-- Project 3 -->
-                    <article class="project-card hidden" style="transition-delay: 300ms;">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Application">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                    <article class="project-row">
+                        <div class="project-row-inner">
+                            <div class="project-meta">
+                                <span class="project-num">03</span>
+                                <div class="project-tags-col">
+                                    <span class="p-tag">JavaScript</span>
+                                    <span class="p-tag">OOP</span>
+                                    <span class="p-tag">LocalStorage</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Study Smart</h3>
+                                <p class="project-desc">A student productivity tool built around OOP principles — managing study sessions, deadlines, and academic goals with a clean local-first architecture.</p>
+                            </div>
+                            <div class="project-action">
+                                <a href="#" class="project-link-btn">View <span class="link-arrow">↗</span></a>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Banking App Concept</h3>
-                            <p>An intuitive mobile banking interface focused on user accessibility.</p>
-                            <div class="project-tags">
-                                <span>Mobile</span>
-                                <span>Fintech</span>
-                            </div>
-                        </div>
+                        <div class="project-divider"></div>
                     </article>
+
+                    <article class="project-row">
+                        <div class="project-row-inner">
+                            <div class="project-meta">
+                                <span class="project-num">04</span>
+                                <div class="project-tags-col">
+                                    <span class="p-tag">HTML/CSS</span>
+                                    <span class="p-tag">JavaScript</span>
+                                    <span class="p-tag">Vanilla</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">VibeShift</h3>
+                                <p class="project-desc">An interactive mood-based web experience with dynamic theme shifting and ambient controls — built purely in vanilla JS with zero dependencies.</p>
+                            </div>
+                            <div class="project-action">
+                                <a href="#" class="project-link-btn">View <span class="link-arrow">↗</span></a>
+                            </div>
+                        </div>
+                        <div class="project-divider"></div>
+                    </article>
+
+                    <article class="project-row">
+                        <div class="project-row-inner">
+                            <div class="project-meta">
+                                <span class="project-num">05</span>
+                                <div class="project-tags-col">
+                                    <span class="p-tag">JavaScript</span>
+                                    <span class="p-tag">CRUD</span>
+                                    <span class="p-tag">LocalStorage</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">SyllaLog</h3>
+                                <p class="project-desc">A lightweight syllabus tracker for students — log course outlines, track coverage progress, and get visual completion feedback across subjects.</p>
+                            </div>
+                            <div class="project-action">
+                                <a href="#" class="project-link-btn">View <span class="link-arrow">↗</span></a>
+                            </div>
+                        </div>
+                        <div class="project-divider"></div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact">
-            <div class="section-container">
-                <div class="contact-wrapper hidden">
-                    <div class="contact-info">
-                        <h2 class="section-title">Let's Connect</h2>
-                        <p>Have a project in mind or want to discuss opportunities? I'm currently open for new roles and exciting projects.</p>
-                        <ul class="social-links">
-                            <li><a href="#"><i class='bx bxl-linkedin-square'></i> LinkedIn</a></li>
-                            <li><a href="#"><i class='bx bxl-github'></i> GitHub</a></li>
-                            <li><a href="#"><i class='bx bxl-facebook'></i> Facebook</a></li>
-                            <li><a href="#"><i class='bx bx-envelope'></i> twicenavarro23@gmail.com</a></li>
-                        </ul>
+        <section id="contact" class="section contact-section">
+            <div class="section-inner">
+                <div class="section-header reveal">
+                    <span class="section-num">04</span>
+                    <span class="section-rule"></span>
+                    <span class="section-name">Contact</span>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-left reveal">
+                        <h2 class="contact-headline">Let's build<br>something <span class="accent-text">real.</span></h2>
+                        <p class="contact-sub">Open for freelance, internships, and full-time roles. If you have an interesting problem, I want to hear it.</p>
+                        <div class="social-row">
+                            <a href="#" class="social-btn"><i class="bx bxl-github"></i> GitHub</a>
+                            <a href="#" class="social-btn"><i class="bx bxl-linkedin-square"></i> LinkedIn</a>
+                            <a href="mailto:twicenavarro23@gmail.com" class="social-btn"><i class="bx bx-envelope"></i> Email</a>
+                        </div>
                     </div>
-                    <form class="contact-form" onsubmit="event.preventDefault();">
-                        <div class="form-group">
-                            <input type="text" id="name" required placeholder=" ">
-                            <label for="name">Name</label>
-                            <div class="input-line"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required placeholder=" ">
-                            <label for="email">Email</label>
-                            <div class="input-line"></div>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" required placeholder=" " rows="4"></textarea>
-                            <label for="message">Message</label>
-                            <div class="input-line"></div>
-                        </div>
-                        <button type="submit" class="btn primary-btn submit-btn">Send Message <i class='bx bx-send' ></i></button>
-                    </form>
+                    <div class="contact-right reveal" style="--reveal-delay: 150ms;">
+                        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                            <div class="field">
+                                <input type="text" id="f-name" name="name" required placeholder=" " autocomplete="off">
+                                <label for="f-name">Name</label>
+                            </div>
+                            <div class="field">
+                                <input type="email" id="f-email" name="email" required placeholder=" " autocomplete="off">
+                                <label for="f-email">Email</label>
+                            </div>
+                            <div class="field">
+                                <textarea id="f-msg" name="message" required placeholder=" " rows="5"></textarea>
+                                <label for="f-msg">Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message <span class="send-arrow">→</span></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Tways.dev. Built with passion and chill vibes.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-logo">TWAYS<span class="logo-accent">.dev</span></span>
+            <span class="footer-copy">© 2026 — Designed & Built by Tways Navarro</span>
+            <a href="#home" class="back-top">Back to top ↑</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
